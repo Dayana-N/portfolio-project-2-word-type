@@ -96,7 +96,7 @@ body {
 #start-game {
     width: 100%;
     height: 100%;
-    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -140,7 +140,7 @@ body {
 #end-game {
     width: 100%;
     height: 100%;
-    /* display: flex; */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -163,11 +163,4 @@ body {
     font-size: 20px;
     background-color: #7d9063;
     margin-bottom: 30px;
-}
-
-
-
-
-.hidden {
-    display: none;
 }
