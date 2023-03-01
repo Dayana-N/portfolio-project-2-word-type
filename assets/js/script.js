@@ -111,7 +111,24 @@ function generateWord(array){
         characterSpan.innerText = character.toUpperCase();
         wordDisplay.appendChild(characterSpan);
         // compare words
+        compareWords()
 
-        
         return randomWord
+    })}
+
+    function compareWords() {
+        let userInput = document.getElementById('input');
+        let currentWord = document.getElementById('display-word');
+  
+        userInput.addEventListener('input', () => {
+          const currentWordText = currentWord.innerText;
+          let userInputText = userInput.value;
+        
+          for (let i = 0; i < currentWordText.length; i++) {
+            if (i >= userInputText.length) {
+              // If the user hasn't typed this far yet, remove any highlighting.
+              currentWord.children[i].classList.remove('green', 'red');
+              console.log(currentWord.children[i])
+              continue;
+            }}
     })}
