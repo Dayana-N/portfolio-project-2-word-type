@@ -124,7 +124,8 @@ body {
 
 #text {
     text-align: center;
-    max-width: 70%;
+    align-items: center;
+    width: 100%;
     padding: 10px;
 }
 
