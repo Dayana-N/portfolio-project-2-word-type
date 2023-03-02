@@ -83,7 +83,6 @@ function checkGameType() {
     let gameType;
 
     difficultyButtons.forEach(button => button.classList.contains('active') ? gameType = button.getAttribute('data-type') : console.log('no active class'));
-    console.log(gameType, generateWord(mediumWords))
 
     if(gameType === 'easy'){
         generateWord(easyWords)
@@ -116,6 +115,7 @@ function generateWord(array){
         return randomWord
     })}
 
+    // compare each character of the current word with the input field character
     function compareWords() {
         let userInput = document.getElementById('input');
         let currentWord = document.getElementById('display-word');
@@ -125,10 +125,27 @@ function generateWord(array){
           let userInputText = userInput.value;
         
           for (let i = 0; i < currentWordText.length; i++) {
+            const currentChar = currentWordText.charAt(i);
+            const userInputChar = userInputText.charAt(i);
+
             if (i >= userInputText.length) {
               // If the user hasn't typed this far yet, remove any highlighting.
               currentWord.children[i].classList.remove('green', 'red');
-              console.log(currentWord.children[i])
               continue;
-            }}
+            }
+
+            if(currentChar.toLocaleLowerCase() === userInputChar.toLocaleLowerCase()) {
+                currentWord.children[i].classList.remove('red');
+                currentWord.children[i].classList.add('green');
+            } else {
+                currentWord.children[i].classList.remove('green');
+                currentWord.children[i].classList.add('red');
+            }
+        }
+        
+        if(currentWordText.toLowerCase() === userInputText.toLowerCase()) {
+            checkGameType()
+        }
+            
     })}
+
