@@ -72,6 +72,7 @@ function startGame() {
     // check game time to display correct word
     checkGameType()
     // start timer
+    startTimer()
 
 }
 
@@ -154,5 +155,28 @@ function incrementScore() {
     let score = parseInt(document.getElementById('score').innerHTML);
     score ++
     document.getElementById('score').innerHTML = score;
-    
+}
+
+// start the timer
+function startTimer() {
+    let timer = document.getElementById('time');
+    let time = 4;
+
+    let setTimer = setInterval(() => {
+        --time;
+        timer.innerHTML = time;
+// if time is 0 stop the timer and display end screen
+        if(time === 0){
+            clearInterval(setTimer);
+            gameOver()
+        }
+    }, 1000);
+}
+
+// display end screen
+function gameOver() {
+    document.getElementById('start-game').style.display = 'none';
+    document.getElementById('end-game').style.display = 'flex';
+
+
 }
