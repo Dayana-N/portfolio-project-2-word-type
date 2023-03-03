@@ -1,3 +1,6 @@
+// Array to hold the highScore values set to the value in local storage or empty array
+let highScore = JSON.parse(localStorage.getItem("highScore")) || [];
+
 document.addEventListener('DOMContentLoaded', (e) => {
     // Add active class on difficulty button and removes it from the rest
     activeButton()
@@ -160,7 +163,7 @@ function incrementScore() {
 // start the timer
 function startTimer() {
     let timer = document.getElementById('time');
-    let time = 3;
+    let time = 7;
 
     let setTimer = setInterval(() => {
         --time;
@@ -215,7 +218,42 @@ function checkNameInput() {
     })
 }
 
+// display the score screen
 function submitScore() {
     document.getElementById('end-game').style.display = 'none';
     document.getElementById('score-screen').style.display = 'flex';
+    saveHighScore()
+    displayHighScore()
+}
+
+//save scores in local storage
+
+function saveHighScore() {
+    let name = document.getElementById('input-name').value;
+    let score = document.getElementById('score').innerText
+// create object with the user name and score
+    let scoreObj = {
+        name: name,
+        score: score
+    };
+    // push the object to the array
+    highScore.push(scoreObj)
+    // sort the array
+    highScore.sort((a,b) => b.score - a.score)
+    console.log(highScore)
+    // slices 5 values from the array
+    highScore.splice(5)
+    // add the array to local storage
+    localStorage.setItem('highScore', JSON.stringify(highScore));
+}
+
+// display the highscore in the html document
+function displayHighScore() {
+    let savedScore = JSON.parse(localStorage.getItem('highScore')) || [];
+    savedScore.forEach(score => {
+        let item = document.createElement('li');
+        item.innerText = `${score.name}  ${score.score}`
+        document.getElementById('score-list').appendChild(item)
+        console.log(item, score)
+    })
 }

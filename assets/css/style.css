@@ -254,7 +254,11 @@ body {
     font-weight: bold;
     font-size: 20px;
     background-color: #7d9063;
+    border-radius: 5px;
     margin-bottom: 30px;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid black;
 }
 
 #play-again:active {
