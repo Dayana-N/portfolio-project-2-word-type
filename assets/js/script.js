@@ -160,7 +160,7 @@ function incrementScore() {
 // start the timer
 function startTimer() {
     let timer = document.getElementById('time');
-    let time = 4;
+    let time = 15;
 
     let setTimer = setInterval(() => {
         --time;
@@ -178,5 +178,23 @@ function gameOver() {
     document.getElementById('start-game').style.display = 'none';
     document.getElementById('end-game').style.display = 'flex';
 
+    let score = document.getElementById('score').innerText;
+    let result = document.getElementById('result');
+    result.innerHTML = score;
+    endGameMessage()
 
+}
+
+// generates message based on the score number
+function endGameMessage(){
+    let text = document.getElementById('result-msg');
+    let score = parseInt(document.getElementById('score').innerText);
+
+    if(score <= 10) {
+        text.innerText = 'You Should Practice More!'
+    } else if(score <= 20) {
+        text.innerText = 'Well Done!'
+    } else {
+        text.innerText = 'Godlike!'
+    }
 }
