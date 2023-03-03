@@ -182,6 +182,9 @@ function gameOver() {
     let result = document.getElementById('result');
     result.innerHTML = score;
     endGameMessage()
+    checkNameInput()
+
+    document.getElementById('submit').addEventListener('click', submitScore())
 
 }
 
@@ -197,4 +200,22 @@ function endGameMessage(){
     } else {
         text.innerText = 'Godlike!'
     }
+}
+
+function checkNameInput() {
+    let nameInput = document.getElementById('input-name');
+    let submitBtn = document.getElementById('submit');
+
+    nameInput.addEventListener('input', () => {
+        if(nameInput.value === ''){
+            submitBtn.disabled = true;
+        } else {
+            submitBtn.disabled = false;
+        }
+    })
+}
+
+function submitScore(e) {
+    document.getElementById('end-game').style.display = 'none';
+    document.getElementById('score-screen').style.display = 'flex';
 }
