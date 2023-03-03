@@ -118,34 +118,34 @@ function generateWord(array){
     // compare each character of the current word with the input field character
     function compareWords() {
         let userInput = document.getElementById('input');
-        let currentWord = document.getElementById('display-word');
-  
+        
+        // add eventlistener to the input and create arrays by splitting the input values and the characters in the word
         userInput.addEventListener('input', () => {
-          const currentWordText = currentWord.innerText;
-          let userInputText = userInput.value;
-        
-          for (let i = 0; i < currentWordText.length; i++) {
-            const currentChar = currentWordText.charAt(i);
-            const userInputChar = userInputText.charAt(i);
+            let arrayWord = document.querySelectorAll('.character-span');
+            let arrayInput = userInput.value.split('');
+            let correct = true;
 
-            if (i >= userInputText.length) {
-              // If the user hasn't typed this far yet, remove any highlighting.
-              currentWord.children[i].classList.remove('green', 'red');
-              continue;
-            }
+            arrayWord.forEach((characterSpan, index) => {
+                let character = arrayInput[index];
 
-            if(currentChar.toLocaleLowerCase() === userInputChar.toLocaleLowerCase()) {
-                currentWord.children[i].classList.remove('red');
-                currentWord.children[i].classList.add('green');
-            } else {
-                currentWord.children[i].classList.remove('green');
-                currentWord.children[i].classList.add('red');
+                if(character == null){
+                    characterSpan.classList.remove('green');
+                    characterSpan.classList.remove('red');
+                    correct = false;
+                } else if (character.toLowerCase() === characterSpan.innerText.toLowerCase()) {
+                    characterSpan.classList.add('green');
+                    characterSpan.classList.remove('red');
+                } else {
+                    characterSpan.classList.add('red');
+                    characterSpan.classList.remove('green');
+                    correct = false;
+                }
+            })
+
+            if(correct) {
+                checkGameType()
+                // increment score
             }
-        }
-        
-        if(currentWordText.toLowerCase() === userInputText.toLowerCase()) {
-            checkGameType()
-        }
-            
-    })}
+        })
+    }
 
