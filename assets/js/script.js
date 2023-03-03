@@ -184,7 +184,7 @@ function gameOver() {
     endGameMessage()
     checkNameInput()
 
-    document.getElementById('submit').addEventListener('click', submitScore())
+    document.getElementById('submit').addEventListener('click',() => submitScore())
 
 }
 
@@ -215,7 +215,7 @@ function checkNameInput() {
     })
 }
 
-function submitScore(e) {
+function submitScore() {
     document.getElementById('end-game').style.display = 'none';
     document.getElementById('score-screen').style.display = 'flex';
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>TypeGame</title>
 </head>
+
 <body>
     <div id="main">
         <div id="container">
@@ -15,14 +17,14 @@
                 <p id="logo">WordType</p>
             </div>
 
-            <div id="welcome-screen" >
+            <div id="welcome-screen">
                 <h1 id="welcome-text"></h1>
                 <h2 id="text2">Do you think you can beat the clock?</h2>
                 <p>Select Difficulty</p>
                 <div id="button-container">
-                    <button data-type="easy"class="difficulty-btn">Easy</button>
-                    <button data-type="medium"class="difficulty-btn">Medium</button>
-                    <button data-type="hard"class="difficulty-btn">Hard</button>
+                    <button data-type="easy" class="difficulty-btn">Easy</button>
+                    <button data-type="medium" class="difficulty-btn">Medium</button>
+                    <button data-type="hard" class="difficulty-btn">Hard</button>
                 </div>
                 <button id="start">Start The Game</button>
                 <div id="error-start"></div>
@@ -49,13 +51,17 @@
             </div>
 
             <div id="score-screen">
-                <h1>Score Board Of Fame</h1>
-                <ul id="score-list">
-                    <li>Mary: 50</li>
-                    <li>Mary - 50</li>
-                    <li>Mary 50</li>
-                    <li>Mary: 50</li>
-                </ul>
+                <div id="score-background">
+                    <h2>Hall of Fame</h2>
+                    <ul id="score-list">
+                        <li>Mary: 50</li>
+                        <li>Mary - 50</li>
+                        <li>Mary 50</li>
+                        <li>Mary: 50</li>
+                        <li>Mary: 50</li>
+                    </ul>
+                </div>
+
                 <button id="play-again">Play Again</button>
             </div>
 
@@ -66,4 +72,5 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/words.js"></script>
 </body>
+
 </html>
