@@ -73,8 +73,6 @@ function startGame() {
     checkGameType()
     // start timer
 
-    // compare the words
-
 }
 
 // check game type selected and pass it on to the generate word function
@@ -143,9 +141,18 @@ function generateWord(array){
             })
 
             if(correct) {
+                // check game type and display word
                 checkGameType()
                 // increment score
+                incrementScore()
             }
         })
     }
 
+
+function incrementScore() {
+    let score = parseInt(document.getElementById('score').innerHTML);
+    score ++
+    document.getElementById('score').innerHTML = score;
+    
+}
