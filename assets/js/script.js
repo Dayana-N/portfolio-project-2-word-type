@@ -149,7 +149,7 @@ function generateWord(array){
         })
     }
 
-
+// increment score
 function incrementScore() {
     let score = parseInt(document.getElementById('score').innerHTML);
     score ++
