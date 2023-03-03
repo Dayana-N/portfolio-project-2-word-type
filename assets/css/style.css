@@ -8,6 +8,7 @@
 body {
     font-family: 'Special Elite', sans-serif;
 }
+
 /* Main container holding the background image */
 #main {
     background-image: url(../images/typewritter-background.webp);
@@ -82,7 +83,8 @@ body {
     font-size: 20px
 }
 
-.difficulty-btn, #start {
+.difficulty-btn,
+#start {
     padding: 10px 20px;
     font-family: inherit;
     font-weight: bold;
@@ -119,7 +121,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;    
+    margin-top: 90px;
 }
 
 #text {
@@ -144,6 +146,15 @@ body {
     font-family: inherit;
     font-weight: bold;
     text-align: center;
+}
+
+/* Add colors to correct or wrong letters */
+.green {
+    color: #7d9063;
+}
+
+.red {
+    color: #a14531;
 }
 
 #info {
@@ -171,12 +182,26 @@ body {
     margin-bottom: 10px;
 }
 
-#end-game p {
+.end-text {
     font-size: 26px;
+    font-weight: bold;
     margin: 10px 0 10px 0;
 }
 
-#end-game #play-again {
+#input-name {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid #000;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 70%;
+    font-size: 2rem;
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+#submit {
     padding: 10px 20px;
     font-family: inherit;
     font-weight: bold;
@@ -185,10 +210,49 @@ body {
     margin-bottom: 30px;
 }
 
-.green {
-    color: #7d9063;
+#submit:active {
+    background-color: #a14531;
+    scale: 0.9;
+    border: 2px inset #7a3728;
 }
 
-.red {
-    color: #a14531;
+/* score screen */
+#score-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#score-list {
+    padding: 0;
+    background-color: #929d81e6;
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.414);
+    margin:20px 0 20px 0;
+}
+
+#score-list li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    text-align: center;
+}
+
+#play-again {
+    padding: 10px 20px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #7d9063;
+    margin-bottom: 30px;
+}
+
+#play-again:active {
+    background-color: #a14531;
+    scale: 0.9;
+    border: 2px inset #7a3728;
 }

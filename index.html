@@ -36,14 +36,26 @@
 
                 <div id="info">
                     <p>Score: <span id="score">10</span></p>
-                    <p>Time: <span id="time"></span> s</p>
+                    <p>Time: <span id="time">15</span> s</p>
                 </div>
             </div>
 
             <div id="end-game">
                 <h1>The Time Is Up!</h1>
-                <p>Your Score Is <span id="result">20</span></p>
-                <p id="result-msg"></p>
+                <p class="end-text">Your Score Is <span class="end-text" id="result">20</span></p>
+                <p class="end-text" id="result-msg"></p>
+                <input type="text" id="input-name" autocomplete="off">
+                <button id="submit">Submit</button>
+            </div>
+
+            <div id="score-screen">
+                <h1>Score Board Of Fame</h1>
+                <ul id="score-list">
+                    <li>Mary: 50</li>
+                    <li>Mary - 50</li>
+                    <li>Mary 50</li>
+                    <li>Mary: 50</li>
+                </ul>
                 <button id="play-again">Play Again</button>
             </div>
 
