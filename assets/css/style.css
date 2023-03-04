@@ -93,7 +93,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
 }
 
 .difficulty-btn {
@@ -139,7 +139,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 120px;
 }
 
 #text {
@@ -249,8 +249,8 @@ body {
 }
 
 #score-background {
-    background: rgb(222,222,204);
-    background: radial-gradient(circle, rgba(222,222,204,1) 0%, rgba(214,205,157,1) 82%);
+    background: rgb(222, 222, 204);
+    background: radial-gradient(circle, rgba(222, 222, 204, 1) 0%, rgba(214, 205, 157, 1) 82%);
     padding: 40px;
     border: 2px solid #000;
     border-radius: 10px;
@@ -329,9 +329,14 @@ body {
 
     /* The current word displaying in the game screen */
     #display-word {
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin-bottom: 15px;
-}
+    }
+
+    #input {
+        font-size: 2rem;
+        width: 90%;
+    }
 }
 
 /* Media query for smaller than 500px screens */
@@ -341,8 +346,9 @@ body {
     #button-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;  
+        justify-content: center;
     }
+
     /* difficulty buttons */
     .difficulty-btn {
         width: 170px;
@@ -352,7 +358,35 @@ body {
     /* typwritter text on welcome screen */
     #welcome-screen h1 {
         margin: 0;
-        font-size: 2em;
+        font-size: 2rem;
         padding-top: 0;
+    }
+
+    #text {
+        padding: 0;
+    }
+
+    #display-word {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #input {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    #display-word {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    #input {
+        font-size: 1.5rem;
+    }
+
+    #info p {
+        font-size: 20px;
     }
 }

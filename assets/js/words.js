@@ -2,4 +2,4 @@ const easyWords = ['Apple', 'Hello', 'Table', 'Chair', 'Car','Ship', 'Chicken', 
 
 const mediumWords = ['Accidentally', 'Acquit', 'Atheist']
 
-const hardWords = ['Worcestershire', 'Mischievous', 'Conscientious', 'Acquiesce']
+const hardWords = ['Worcestershire', 'Mischievous', 'Conscientious', 'Acquiesce', 'constitutional','recommendation','concentration','understanding']

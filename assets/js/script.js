@@ -163,7 +163,7 @@ function incrementScore() {
 // start the timer
 function startTimer() {
     let timer = document.getElementById('time');
-    let time = 7;
+    let time = 30;
 
     let setTimer = setInterval(() => {
         --time;
