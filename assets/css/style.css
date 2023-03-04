@@ -12,13 +12,14 @@ body {
 /* Main container holding the background image */
 #main {
     background-image: url(../images/typewritter-background.webp);
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* Container holding the different screens */
@@ -26,6 +27,10 @@ body {
     width: 500px;
     min-height: 380px;
     max-width: 60%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
     background: rgba(201, 201, 201, 0.29);
     border-radius: 16px;
     border: 1px solid rgba(201, 201, 201, 0.43);
@@ -66,7 +71,6 @@ body {
     margin-top: 10px;
 }
 
-
 #welcome-screen h1 {
     margin: 35px 0 15px 0;
     font-size: 2.5em;
@@ -106,6 +110,7 @@ body {
     background-color: #7d9063;
     margin-bottom: 20px;
     border-radius: 5px;
+    border: 2px solid #000;
 }
 
 #start:active {
@@ -121,10 +126,9 @@ body {
 }
 
 #error-start {
-    color: #a14531;
-    background-color: rgba(33, 33, 33, 0.429);
-    padding: 4px;
-    border-radius: 4px;
+    height: 20px;
+    color: #b92500;
+    font-weight: bolder;
 }
 
 /* Start Game screen, displaying the game */
@@ -145,7 +149,7 @@ body {
     padding: 10px;
 }
 
-#text h1 {
+#display-word {
     font-size: 3rem;
     margin-bottom: 15px;
 }
@@ -172,13 +176,16 @@ body {
 }
 
 #info {
-    width: 70%;
+    width: 90%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 #info p {
     font-size: 24px;
+    margin: 8px;
+    font-weight: bold;
 }
 
 /* End game screen */
@@ -194,12 +201,14 @@ body {
 
 #end-game h1 {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .end-text {
     font-size: 26px;
     font-weight: bold;
     margin: 10px 0 10px 0;
+    text-align: center;
 }
 
 #input-name {
@@ -289,9 +298,61 @@ body {
 /* Media query for smaller than 800px screens */
 @media (max-width: 800px) {
 
+    /* Container holding the different screens changing */
     #container {
         min-height: 380px;
         max-width: 80%;
-        padding: 20px;
+        padding: 10px;
+    }
+
+    /* input field for name */
+    #input-name {
+        width: 75%;
+    }
+}
+
+/* Media query for smaller than 600px screens */
+@media (max-width: 600px) {
+
+    /* Container holding the typewritter text on welcome screen */
+    #text-holder {
+        height: 140px;
+        max-width: 80%;
+        padding: 50px 0 5px 0;
+    }
+
+    #welcome-screen h1 {
+        margin: 0;
+        font-size: 2.5em;
+        padding-top: 0;
+    }
+
+    /* The current word displaying in the game screen */
+    #display-word {
+        font-size: 2rem;
+        margin-bottom: 15px;
+}
+}
+
+/* Media query for smaller than 500px screens */
+@media (max-width: 500px) {
+
+    /* container holding th difficulty buttons on welcome screen */
+    #button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+    }
+    /* difficulty buttons */
+    .difficulty-btn {
+        width: 170px;
+        margin-right: 0px;
+    }
+
+    /* typwritter text on welcome screen */
+    #welcome-screen h1 {
+        margin: 0;
+        font-size: 2em;
+        padding-top: 0;
     }
 }
