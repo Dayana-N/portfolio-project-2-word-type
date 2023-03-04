@@ -379,6 +379,57 @@ body {
     padding-bottom: 20px;
 }
 
+/* 404 Page */
+#body-404 {
+    background: rgb(144,99,77);
+    background: linear-gradient(90deg, rgba(144,99,77,1) 0%, rgba(42,41,41,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#papyrus {
+    background-image: url('../images/papyrus.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#papyrus h1, h2 {
+    margin: 10px 0 20px;
+    text-align: center;
+    
+}
+
+#papyrus h1 {
+    font-size: 2.5rem;
+}
+
+.go-back {
+    padding: 10px 20px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #7d9063;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.go-back:active {
+    background-color: #a14531;
+    scale: 0.9;
+    border: 2px inset #7a3728;
+}
+
 /* Media query for smaller than 800px screens */
 @media (max-width: 800px) {
 
@@ -457,6 +508,12 @@ body {
 
     #input {
         font-size: 1.8rem;
+    }
+
+    /* 404 page */
+    #papyrus {
+        width: 300px;
+        min-height: 400px;
     }
 }
 
