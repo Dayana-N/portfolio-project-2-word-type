@@ -31,8 +31,11 @@
                     <button data-type="medium" class="difficulty-btn">Medium</button>
                     <button data-type="hard" class="difficulty-btn">Hard</button>
                 </div>
-                <button id="start">Start The Game</button>
                 <div id="error-start"></div>
+                <button id="start">Start The Game</button>
+                <button id="how-to-play">How To Play</button>
+
+
             </div>
 
             <!-- Start Game Screen -->
@@ -70,6 +73,21 @@
 
 
     </div>
+    <!-- Modal -->
+    <div id="modal-container">
+        <div id="modal">
+            <h2>How To Play WordType</h2>
+            <p>The rules of the game are very simple. You have 30 seconds to type as many words as possible. You can
+                select the level of difficulty and press start. Once the game has started the timer will start. Tic Toc! <br>
+                You can use capital or lowercase letters that will not affect the result. Once a letter is typed the
+                corresponding letter in the example word will turn green for correct or red for wrong. Once all letters
+                are correct, a new word will be displayed. <br>
+                And remember, you only have 30 seconds.
+            </p>
+            <button id="close">Got It!</button>
+        </div>
+    </div>
+
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/words.js"></script>
 </body>

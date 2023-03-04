@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     activeButton()
     // Check difficulty selected
     checkDifficulty()
+    // How to Play Modal
+    howToPlay()
     // Typewritter effect on the welcome text
     displayText()
 })
@@ -255,5 +257,24 @@ function displayHighScore() {
         item.innerText = `${score.name}  ${score.score}`
         document.getElementById('score-list').appendChild(item)
         console.log(item, score)
+    })
+}
+
+// modal 
+function howToPlay() {
+    modalContainer = document.getElementById('modal-container');
+    howToBtn = document.getElementById('how-to-play');
+    gotItBtn = document.getElementById('close')
+
+    // add eventlistener to the how to play button to display the modal and hide the scroll on background
+    howToBtn.addEventListener('click', () => {
+        modalContainer.style.display = 'flex';
+        document.body.style.overflowY = 'hidden';
+    })
+
+     // add eventlistener to the got it button to hide the modal and revert the scroll on background
+    gotItBtn.addEventListener('click', () => {
+        modalContainer.style.display = 'none';
+        document.body.style.overflowY = 'visible';
     })
 }

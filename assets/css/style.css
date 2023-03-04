@@ -12,14 +12,12 @@ body {
 /* Main container holding the background image */
 #main {
     background-image: url(../images/typewritter-background.webp);
-    /* width: 100%; */
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 /* Container holding the different screens */
@@ -27,10 +25,6 @@ body {
     width: 500px;
     min-height: 380px;
     max-width: 60%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     background: rgba(201, 201, 201, 0.29);
     border-radius: 16px;
     border: 1px solid rgba(201, 201, 201, 0.43);
@@ -98,10 +92,18 @@ body {
 
 .difficulty-btn {
     width: 115px;
-    margin-right: 10px;
+    margin: 0 0 20px 10px;
+    /* margin-right: 10px;
+    margin-bottom: 20px; */
+    padding: 10px 10px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #7d9063;
+    border-radius: 5px;
+    border: 2px solid #000;
 }
 
-.difficulty-btn,
 #start {
     padding: 10px 10px;
     font-family: inherit;
@@ -125,10 +127,85 @@ body {
     border: 2px inset #7a3728;
 }
 
+#how-to-play{
+    width: 170px;
+    padding: 10px 10px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #7d9063;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+#how-to-play:active {
+    background-color: #a14531;
+    scale: 0.9;
+    border: 2px inset #7a3728;
+}
+
 #error-start {
     height: 20px;
     color: #b92500;
     font-weight: bolder;
+}
+
+/* Modal */
+#modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    background-color: rgba(136, 126, 59, 0.553);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal {
+    max-width: 500px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(222, 222, 204);
+    background: radial-gradient(circle, rgba(222, 222, 204, 1) 0%, rgba(214, 205, 157, 1) 82%);
+    padding: 30px;
+    margin: 40px 10px 0 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 10px 13px 5px 0px rgba(0, 0, 0, 0.39);
+}
+
+#modal h2, p {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    line-height: 1.2rem;
+}
+
+
+#close {
+    width: 170px;
+    padding: 10px 10px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #7d9063;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+#close:active {
+    background-color: #a14531;
+    scale: 0.9;
+    border: 2px inset #7a3728;
 }
 
 /* Start Game screen, displaying the game */
@@ -352,7 +429,7 @@ body {
     /* difficulty buttons */
     .difficulty-btn {
         width: 170px;
-        margin-right: 0px;
+        margin: 0 0 20px 0;
     }
 
     /* typwritter text on welcome screen */
@@ -361,7 +438,7 @@ body {
         font-size: 2rem;
         padding-top: 0;
     }
-
+    /* container holding the display word and input */
     #text {
         padding: 0;
     }
@@ -376,6 +453,7 @@ body {
     }
 }
 
+/* Media query for smaller than 380px screens */
 @media (max-width: 380px) {
     #display-word {
         font-size: 1.6rem;
@@ -388,5 +466,11 @@ body {
 
     #info p {
         font-size: 20px;
+    }
+
+    /* adjust the modal pop up for iphone4 screens */
+    #modal {
+        margin: 55px 5px 0 5px;
+
     }
 }
