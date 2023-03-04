@@ -66,6 +66,7 @@ body {
     margin-top: 10px;
 }
 
+
 #welcome-screen h1 {
     margin: 35px 0 15px 0;
     font-size: 2.5em;
@@ -80,17 +81,30 @@ body {
 
 #welcome-screen p {
     margin-bottom: 15px;
-    font-size: 20px
+    font-size: 20px;
+    text-align: center;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.difficulty-btn {
+    width: 115px;
+    margin-right: 10px;
 }
 
 .difficulty-btn,
 #start {
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-family: inherit;
     font-weight: bold;
     font-size: 20px;
     background-color: #7d9063;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 5px;
 }
 
@@ -270,4 +284,14 @@ body {
 #score-screen h2 {
     text-align: center;
     padding-bottom: 20px;
+}
+
+/* Media query for smaller than 800px screens */
+@media (max-width: 800px) {
+
+    #container {
+        min-height: 380px;
+        max-width: 80%;
+        padding: 20px;
+    }
 }
