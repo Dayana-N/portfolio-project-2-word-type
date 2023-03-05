@@ -55,7 +55,6 @@ function checkDifficulty() {
         difficultyButtons.forEach(button => {
             if(button.classList.contains('active')){
                 startError.innerHTML = ''
-                console.log(button)
                 startGame()
             } else {
                 startError.innerHTML = 'Please select difficulty'
