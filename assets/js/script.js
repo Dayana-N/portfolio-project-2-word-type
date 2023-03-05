@@ -261,9 +261,9 @@ function displayHighScore() {
 
 // modal 
 function howToPlay() {
-    modalContainer = document.getElementById('modal-container');
-    howToBtn = document.getElementById('how-to-play');
-    gotItBtn = document.getElementById('close')
+    let modalContainer = document.getElementById('modal-container');
+    let howToBtn = document.getElementById('how-to-play');
+    let gotItBtn = document.getElementById('close')
 
     // add eventlistener to the how to play button to display the modal and hide the scroll on background
     howToBtn.addEventListener('click', () => {
