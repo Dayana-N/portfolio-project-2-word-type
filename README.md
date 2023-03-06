@@ -1,3 +1,10 @@
+# Portfolio Project 2
+## WordType
+WordType is a speed typing game that allows the used to find out how many words they can type within 30 seconds. This project was created using HTML, CSS and JavaScript. <br>
+[Link To WordType](https://dayana-n.github.io/portfolio-project-2-word-type/)
+![responsiveness](./assets/images/readme-images/responsive.PNG)
+
+
 ## Table Of Content
 - [User Experience](#user-experience)
   - [User Stories](#user-stories)
