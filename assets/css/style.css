@@ -31,7 +31,6 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
-
 }
 
 .logo-container {
@@ -100,6 +99,7 @@ body {
     background-color: #7d9063;
     border-radius: 5px;
     border: 2px solid #000;
+    cursor: pointer;
 }
 
 #start {
@@ -111,6 +111,7 @@ body {
     margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid #000;
+    cursor: pointer;
 }
 
 #start:active {
@@ -135,6 +136,7 @@ body {
     margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid #000;
+    cursor: pointer;
 }
 
 #how-to-play:active {
@@ -207,6 +209,7 @@ body {
     margin-bottom: 20px;
     border-radius: 5px;
     border: 2px solid #000;
+    cursor: pointer;
 }
 
 #close:active {
@@ -258,7 +261,7 @@ body {
 .red {
     color: #a14531;
 }
-
+/* Container holding the score and the time */
 #info {
     width: 90%;
     display: flex;
@@ -315,6 +318,7 @@ body {
     font-size: 20px;
     background-color: #7d9063;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 #submit:active {
@@ -366,6 +370,7 @@ body {
     text-decoration: none;
     color: #000;
     border: 2px solid black;
+    cursor: pointer;
 }
 
 #play-again:active {
@@ -422,6 +427,7 @@ body {
     text-decoration: none;
     color: #000;
     border: 2px solid #000;
+    cursor: pointer;
 }
 
 .go-back:active {

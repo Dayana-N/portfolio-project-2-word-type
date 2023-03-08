@@ -33,7 +33,16 @@ WordType is a speed typing game that allows the used to find out how many words 
 ## User Experience
 ### User Stories
 #### First Time Visitor Goals
+- As a first time user, I want to easily understand the main purpose of the site.
+- As a first time user, I want to be able to find the rules of the game quickly after landing on the page.
+- As a first time user, I want to be able to select different difficulty levels for the game. 
+- As a first time user, I want to be able to see my current score.
+- As a first time user, I want to be able to see the remaining time left.
 #### Returning Visitor Goals
+- As a returning user, I want to be able to get a feedback when the game is over with my score.
+- As a returning user, I want to be able to save my current highscore.
+- As a returning user, I want to be able to see the top highscores. 
+- As a returning user, I want to get a feedback during my interaction with the application.
 ## Design
 ### Colour Scheme
 The colours used complement each other for aesthetically pleasing user interface. 
@@ -78,6 +87,9 @@ Testing documentation can be found under [testing.md](/testing.md)
 - [Js Hint](https://jshint.com/) was used to validate the JavaScript code.
 - [Online Convert](https://image.online-convert.com/convert-to-webp) used to convert images to webp format
 - [Coolors.co](https://coolors.co/) was used to display the colour scheme
+- [Box Shadow Generator](https://cssgenerator.org/box-shadow-css-generator.html) was used to generate the shadow for the highscore container
+- [Glassmorphism CSS Generator](https://css.glass/) was used to generate the holding container's colours, however it was changed by removing the blurr.
+- [CSS Gradient](https://cssgradient.io/) was used to generate the 404 page background gradient, the modal container and the highscore container gradient properties
 ## Deployment
 1. Navigate to the [repository](https://github.com/Dayana-N/portfolio-project-2-word-type)
 2. Click on Settings on the top.
