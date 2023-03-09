@@ -96,26 +96,27 @@ The 404 Page consist of a background gradient with a papyrus image. The text inf
 ## Testing
 Testing documentation can be found under [testing.md](/testing.md)
 ## Technologies and languages
-- [HTML](https://web.dev/learn/html/overview/) was used to provide structure for this project
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) was used to style the HTML elements
-- [JavaScript](https://www.javascript.com/) was used to make the game interactive
-- [GitHub](https://github.com/) is the hosting site used to store the code for the website
-- [Git](https://git-scm.com/) was used as a version control software to commit and push the code to the GitHub repository
-- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used as a starting point for the project
-- [Photoshop](https://www.adobe.com/ie/products/photoshop.html) was used for creating the mockup images of the website during planning stage
-- [Balsamiq](https://balsamiq.com/) was used to create the wireframes for the website
+- [HTML](https://web.dev/learn/html/overview/) was used to provide structure for this project.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) was used to style the HTML elements.
+- [JavaScript](https://www.javascript.com/) was used to make the game interactive.
+- [GitHub](https://github.com/) is the hosting site used to store the code for the website.
+- [Git](https://git-scm.com/) was used as a version control software to commit and push the code to the GitHub repository.
+- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) was used as a starting point for the project.
+- [Photoshop](https://www.adobe.com/ie/products/photoshop.html) was used for creating the mockup images of the website during planning stage.
+- [Balsamiq](https://balsamiq.com/) was used to create the wireframes for the website.
 - [Favicon](https://favicon.io/) was used to create the favicon which displays in the tab of the browser
-- [Google Fonts](https://fonts.google.com/) was used to import fonts
-- [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) was used during the testing of the website
-- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/) was used during testing, debugging and making the website responsive
-- [W3C HTML Validator](https://validator.w3.org/) was used to check for errors in the HTML code
+- [Google Fonts](https://fonts.google.com/) was used to import fonts.
+- [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) was used during the testing of the website.
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/) was used during testing, debugging and making the website responsive.
+- [W3C HTML Validator](https://validator.w3.org/) was used to check for errors in the HTML code.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check for errors in the CSS code
 - [Js Hint](https://jshint.com/) was used to validate the JavaScript code.
 - [Online Convert](https://image.online-convert.com/convert-to-webp) used to convert images to webp format
-- [Coolors.co](https://coolors.co/) was used to display the colour scheme
-- [Box Shadow Generator](https://cssgenerator.org/box-shadow-css-generator.html) was used to generate the shadow for the highscore container
+- [Coolors.co](https://coolors.co/) was used to display the colour scheme.
+- [Box Shadow Generator](https://cssgenerator.org/box-shadow-css-generator.html) was used to generate the shadow for the highscore container.
 - [Glassmorphism CSS Generator](https://css.glass/) was used to generate the holding container's colours, however it was changed by removing the blurr.
-- [CSS Gradient](https://cssgradient.io/) was used to generate the 404 page background gradient, the modal container and the highscore container gradient properties
+- [CSS Gradient](https://cssgradient.io/) was used to generate the 404 page background gradient, the modal container and the highscore container gradient properties.
+- [Random Word Generator](https://randomwordgenerator.com/) was used to generate the words for the game.
 ## Deployment
 1. Navigate to the [repository](https://github.com/Dayana-N/portfolio-project-2-word-type)
 2. Click on Settings on the top.

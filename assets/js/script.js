@@ -284,4 +284,10 @@ function howToPlay() {
         modalContainer.style.display = 'none';
         document.body.style.overflowY = 'visible';
     })
+
+    window.onclick = function(event) {
+        if(event.target == modalContainer) {
+            modalContainer.style.display = 'none';
+        }
+    }
 }
