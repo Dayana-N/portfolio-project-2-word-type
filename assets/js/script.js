@@ -3,14 +3,14 @@ let highScore = JSON.parse(localStorage.getItem("highScore")) || [];
 
 document.addEventListener('DOMContentLoaded', (e) => {
     // Add active class on difficulty button and removes it from the rest
-    activeButton()
+    activeButton();
     // Check difficulty selected
-    checkDifficulty()
+    checkDifficulty();
     // How to Play Modal
-    howToPlay()
+    howToPlay();
     // Typewritter effect on the welcome text
-    displayText()
-})
+    displayText();
+});
 
 // Typewritter effect on the welcome text
 function displayText() {
@@ -21,12 +21,12 @@ function displayText() {
     function typewritter(text, textEl) {
 
         if (i < text.length) {
-            textEl.innerHTML += text.charAt(i)
-            i++
-            setTimeout(typewritter, 100, text, textEl)
+            textEl.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typewritter, 100, text, textEl);
         }
     }
-    typewritter(welcomeText, welcomeTextEl)
+    typewritter(welcomeText, welcomeTextEl);
 }
 
 // Add active class on difficulty button and removes it from the rest
@@ -36,13 +36,13 @@ function activeButton() {
     difficultyButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             if (e.target.classList.contains('active')) {
-                difficultyButtons.forEach(button => button.classList.remove('active'))
+                difficultyButtons.forEach(button => button.classList.remove('active'));
             } else {
-                difficultyButtons.forEach(button => button.classList.remove('active'))
-                button.classList.add('active')
+                difficultyButtons.forEach(button => button.classList.remove('active'));
+                button.classList.add('active');
             }
-        })
-    })
+        });
+    });
 }
 
 // Check if  difficulty is selected and start game if it is
@@ -54,13 +54,13 @@ function checkDifficulty() {
     startBtn.addEventListener('click', () => {
         difficultyButtons.forEach(button => {
             if(button.classList.contains('active')){
-                startError.innerHTML = ''
-                startGame()
+                startError.innerHTML = '';
+                startGame();
             } else {
-                startError.innerHTML = 'Please select difficulty'
+                startError.innerHTML = 'Please select difficulty';
             }
-        })
-    })
+        });
+    });
 }
 
 // start game
@@ -69,14 +69,14 @@ function startGame() {
     document.getElementById('start-game').style.display = 'flex';
 
     // Focus on input field
-    document.getElementById('input').focus()
+    document.getElementById('input').focus();
     // Set initial score to 0
     document.getElementById('score').innerHTML = 0;
 
     // check game time to display correct word
-    checkGameType()
+    checkGameType();
     // start timer
-    startTimer()
+    startTimer();
 
 }
 
@@ -87,19 +87,19 @@ function checkGameType() {
     // check which button has active class and assign the difficulty to gameType 
     difficultyButtons.forEach(button => {
         if(button.classList.contains('active')) {
-            gameType = button.getAttribute('data-type')
+            gameType = button.getAttribute('data-type');
         }
-    })
+    });
 
 // check which game type is selected and if there are words in the array before run the game
     if(gameType === 'easy' && easyWords.length !== 0){
-        generateWord(easyWords)
+        generateWord(easyWords);
     } else if (gameType === 'medium' && mediumWords.length !== 0) {
-        generateWord(mediumWords)
+        generateWord(mediumWords);
     } else if (gameType === 'hard' && hardWords.length !== 0) {
-        generateWord(hardWords)
+        generateWord(hardWords);
     } else {
-        generateWord(usedWordArr)
+        generateWord(usedWordsArr);
     }
 }
 
@@ -107,11 +107,11 @@ function checkGameType() {
 function generateWord(array){
     let randomIndex = Math.floor(Math.random() * array.length);
     let randomWord = array[randomIndex];
-    let wordDisplay = document.getElementById('display-word')
+    let wordDisplay = document.getElementById('display-word');
     // Remove the word from the array and store it into usedWordsArr
-    let usedWord = array.splice(randomIndex, 1)
+    let usedWord = array.splice(randomIndex, 1);
     // using the spread operator to push a string as oppose to array
-    usedWordsArr.push(...usedWord)
+    usedWordsArr.push(...usedWord);
 
     wordDisplay.innerHTML = '';
     document.getElementById('input').value = '';
@@ -122,10 +122,11 @@ function generateWord(array){
         characterSpan.innerText = character.toUpperCase();
         wordDisplay.appendChild(characterSpan);
         // compare words
-        compareWords()
+        compareWords();
 
-        return randomWord
-    })}
+        return randomWord;
+    });
+}
 
     // compare each character of the current word with the input field character
     function compareWords() {
@@ -152,21 +153,21 @@ function generateWord(array){
                     characterSpan.classList.remove('green');
                     correct = false;
                 }
-            })
+            });
 
             if(correct) {
                 // check game type and display word
-                checkGameType()
+                checkGameType();
                 // increment score
-                incrementScore()
+                incrementScore();
             }
-        })
+        });
     }
 
 // increment score
 function incrementScore() {
     let score = parseInt(document.getElementById('score').innerHTML);
-    score ++
+    score ++;
     document.getElementById('score').innerHTML = score;
 }
 
@@ -181,7 +182,7 @@ function startTimer() {
 // if time is 0 stop the timer and display end screen
         if(time === 0){
             clearInterval(setTimer);
-            gameOver()
+            gameOver();
         }
     }, 1000);
 }
@@ -194,10 +195,10 @@ function gameOver() {
     let score = document.getElementById('score').innerText;
     let result = document.getElementById('result');
     result.innerHTML = score;
-    endGameMessage()
-    checkNameInput()
+    endGameMessage();
+    checkNameInput();
 
-    document.getElementById('submit').addEventListener('click',() => submitScore())
+    document.getElementById('submit').addEventListener('click',() => submitScore());
 
 }
 
@@ -207,11 +208,11 @@ function endGameMessage(){
     let score = parseInt(document.getElementById('score').innerText);
 
     if(score <= 10) {
-        text.innerText = 'You Should Practice More!'
+        text.innerText = 'You Should Practice More!';
     } else if(score <= 20) {
-        text.innerText = 'Well Done!'
+        text.innerText = 'Well Done!';
     } else {
-        text.innerText = 'Godlike!'
+        text.innerText = 'Godlike!';
     }
 }
 
@@ -225,33 +226,33 @@ function checkNameInput() {
         } else {
             submitBtn.disabled = false;
         }
-    })
+    });
 }
 
 // display the score screen
 function submitScore() {
     document.getElementById('end-game').style.display = 'none';
     document.getElementById('score-screen').style.display = 'flex';
-    saveHighScore()
-    displayHighScore()
+    saveHighScore();
+    displayHighScore();
 }
 
 //save scores in local storage
 
 function saveHighScore() {
     let name = document.getElementById('input-name').value;
-    let score = document.getElementById('score').innerText
+    let score = document.getElementById('score').innerText;
 // create object with the user name and score
     let scoreObj = {
         name: name,
         score: score
     };
     // push the object to the array
-    highScore.push(scoreObj)
+    highScore.push(scoreObj);
     // sort the array
-    highScore.sort((a,b) => b.score - a.score)
+    highScore.sort((a,b) => b.score - a.score);
     // slices 5 values from the array
-    highScore.splice(5)
+    highScore.splice(5);
     // add the array to local storage
     localStorage.setItem('highScore', JSON.stringify(highScore));
 }
@@ -261,34 +262,33 @@ function displayHighScore() {
     let savedScore = JSON.parse(localStorage.getItem('highScore')) || [];
     savedScore.forEach(score => {
         let item = document.createElement('li');
-        item.innerText = `${score.name}  ${score.score}`
-        document.getElementById('score-list').appendChild(item)
-        console.log(item, score)
-    })
+        item.innerText = `${score.name}  ${score.score}`;
+        document.getElementById('score-list').appendChild(item);
+    });
 }
 
 // modal 
 function howToPlay() {
     let modalContainer = document.getElementById('modal-container');
     let howToBtn = document.getElementById('how-to-play');
-    let gotItBtn = document.getElementById('close')
+    let gotItBtn = document.getElementById('close');
 
     // add eventlistener to the how to play button to display the modal and hide the scroll on background
     howToBtn.addEventListener('click', () => {
         modalContainer.style.display = 'flex';
         document.body.style.overflowY = 'hidden';
-    })
+    });
 
      // add eventlistener to the got it button to hide the modal and revert the scroll on background
     gotItBtn.addEventListener('click', () => {
         modalContainer.style.display = 'none';
         document.body.style.overflowY = 'visible';
-    })
+    });
 
     // add onclick event outside the modal window closes the modal
     window.onclick = function(event) {
         if(event.target == modalContainer) {
             modalContainer.style.display = 'none';
         }
-    }
+    };
 }
