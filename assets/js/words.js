@@ -5,3 +5,5 @@ const mediumWords = ['Accidentally', 'Acquit', 'Atheist',
 ]
 
 const hardWords = ['Worcestershire', 'Mischievous', 'Conscientious', 'Acquiesce', 'constitutional','recommendation','concentration','understanding','Abscess','Asthma','Bhagavata','Champagne','Cologne','Conscience','Ascent','Dilemma','Collegiate','Endeavor','Miniature','Gist','Troupe','Concerted','Embarrass','Hierarchy','Liaison','Maneuver','Noticeable','Humorous','Necessary','Entrepreneur','Paradigm','Parallel','Exacerbate','Questionnaire','Harass','Grateful','Changeable','Bureaucracy','Connoisseur','Pneumonia','Narcissistic','Privileged','Resuscitate','Autochthonous','Immediate','Surveillance','Abacaxi','Advocaat','Aitch','Atlatl','Chhatri','Cnemidocoptes','Vengeance','Conscious','Judgment','Indispensable', 'Misspell','Maintenance','Rhythm','Memento','Inoculate','Couroisie','Acknowledgment','Embezzlement','Eguiite','Evanescent','Extraneous','Fallacious','Sergeant','Ubiquitous','Referred','Vicarious','Khedive','Mlechchha','Efficacy','Handkerchief','Threshold','Twelfth','Eloquent','Pastime','Weather','Vacuum','Discipline','Occasionally','Colloquial']
+
+let usedWordsArr = [];

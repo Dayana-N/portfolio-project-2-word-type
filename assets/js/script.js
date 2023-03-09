@@ -87,15 +87,14 @@ function checkGameType() {
 
     difficultyButtons.forEach(button => button.classList.contains('active') ? gameType = button.getAttribute('data-type') : console.log('no active class'));
 
-    if(gameType === 'easy'){
+    if(gameType === 'easy' && easyWords.length !== 0){
         generateWord(easyWords)
-    } else if (gameType === 'medium') {
+    } else if (gameType === 'medium' && mediumWords.length !== 0) {
         generateWord(mediumWords)
-    } else if (gameType === 'hard') {
+    } else if (gameType === 'hard' && hardWords.length !== 0) {
         generateWord(hardWords)
     } else {
-        generateWord(easyWords)
-        throw Error('Unknown game type, starting default game type easy')
+        generateWord(usedWordArr)
     }
 }
 
@@ -104,6 +103,11 @@ function generateWord(array){
     let randomIndex = Math.floor(Math.random() * array.length);
     let randomWord = array[randomIndex];
     let wordDisplay = document.getElementById('display-word')
+    // Remove the word from the array and store it into usedWordsArr
+    let usedWord = array.splice(randomIndex, 1)
+    // using the spread operator to push a string as oppose to array
+    usedWordsArr.push(...usedWord)
+
     wordDisplay.innerHTML = '';
     document.getElementById('input').value = '';
 
