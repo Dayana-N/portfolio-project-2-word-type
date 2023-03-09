@@ -67,28 +67,28 @@ Early mockups using Photoshop. These were created to provide visual guide for co
 ## Features
 ## Welcome Screen
 The game consist of one html page with dynamically changing screens using JavaScript and one 404 page.
-The background image was picked carefully to suit the theme of the game. When the page is loaded the welcome text loads with typewritter like effect. The name of the game is clearly communicated in the header of the main container. The difficulty buttons were design so that only one can be active at a time, and if it is active and clicked again will turn inactive. The active state is visually communicated to the user by changing color, reducing size and changing the border style, which overall makes the button appear as if it is pressed. This is consistent for all the buttons throughout the game.
+The background image was picked carefully to suit the theme of the game. When the page is loaded the welcome text loads with typewritter like effect. The name of the game is clearly communicated in the header of the main container. The difficulty buttons were design so that only one can be active at a time, and if it is active and clicked again will turn inactive. The active state is visually communicated to the user by changing color, reducing size and changing the border style, which overall makes the button appear as if it is pressed. This is consistent for all the buttons throughout the game. <br>
 ![Welcome Screen](./assets/images/readme-images/features/home-screen1.PNG)
-If the user attempts to start the game without selecting difficulty a warning message appears above the start button asking the user to select difficulty first. 
+If the user attempts to start the game without selecting difficulty a warning message appears above the start button asking the user to select difficulty first. <br>
 ![Welcome Screen warning](./assets/images/readme-images/features/home-screen2.PNG)
-The how to play button displays a modal popup with clear instructions of the game's rules for better user experience. 
+The how to play button displays a modal popup with animation transition, which provides clear instructions of the game's rules for better user experience. When the modal is displayed the scroll on the main page is disabled and it is enabled on the modal section only if it is needed(for example small screen sizes like iphone 4) If the user clicks outside of the modal it will close it. <br>
 ![Welcome Screen modal](./assets/images/readme-images/features/home-screen-modal.PNG)
 
 ## Game Screen
-Once the game starts, the game screen will dynamically appear. This screen will display the word that the user needs to type. The input field has autofocus for better user experience (prevents the user having to click on the input field to start typing). Below the input field, the score and the timer are displayed. The timer starts counting down from 30s. When the user starts typing, each input character is compared to the word's character at the same index. If correct the character will turn green, if wrong turns red to communicate to the user the wrong input. Note that the user can use capital letters or lowercase letters. If the user removes a character from the input field the character in the word will turn black again. Every time the user types a word correct the next word will appear and the score will increment by one.
+Once the game starts, the game screen will dynamically appear. This screen will display the word that the user needs to type. The input field has autofocus for better user experience (prevents the user having to click on the input field to start typing). Below the input field, the score and the timer are displayed. The timer starts counting down from 30s. When the user starts typing, each input character is compared to the word's character at the same index. If correct the character will turn green, if wrong turns red to communicate to the user the wrong input. Note that the user can use capital letters or lowercase letters. If the user removes a character from the input field the character in the word will turn black again. Every time the user types a word correct the next word will appear and the score will increment by one. <br>
 ![Game Screen](./assets/images/readme-images/features/game-screen2.PNG)
 
 ## End Game Screen
-Once the timer reaches zero, the screen changes to end game. Here the user will be notified that the time is up and their score. A message is generated depending on the score value. Three messages are available: You Should Practice More!, Well Done! and Godlike! This if followed by an input field for the user's name. The submit button is deactivated until there is text in the input field. Once the submit button is pressed, the highscore is added to an array and sorted by the highest score. The top 5 scores are saved in local storage. 
+Once the timer reaches zero, the screen changes to end game. Here the user will be notified that the time is up and their score. A message is generated depending on the score value. Three messages are available: You Should Practice More!, Well Done! and Godlike! This if followed by an input field for the user's name. The submit button is deactivated until there is text in the input field. Once the submit button is pressed, the highscore is added to an array and sorted by the highest score. The top 5 scores are saved in local storage. <br>
 ![End Game Screen](./assets/images/readme-images/features/end-screen1.PNG)
 ![End Game Screen](./assets/images/readme-images/features/end-screen3.PNG)
 
 ## Scoreboard
-The scoreboard screen will display the top 5 highscores sorted from highest to lowest. This is then followed by a play gain button, which takes the user to the start screen. 
+The scoreboard screen will display the top 5 highscores sorted from highest to lowest. This is then followed by a play gain button, which takes the user to the start screen. <br>
 ![Scoreboard](./assets/images/readme-images/features/scoreboard.PNG)
 
 ## 404 Page
-The 404 Page consist of a background gradient with a papyrus image. The text informs the user that there is nothing on this page and has a button which leads to the start screen.
+The 404 Page consist of a background gradient with a papyrus image. The text informs the user that there is nothing on this page and has a button which leads to the start screen. <br>
 ![404 Page](./assets/images/readme-images/features/404-page.PNG)
 ## Future Features 
 - I would like implement saving the highscores in a backend database, where the users can compare their score against others.
