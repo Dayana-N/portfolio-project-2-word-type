@@ -178,7 +178,7 @@ body {
     background: rgb(222, 222, 204);
     background: radial-gradient(circle, rgba(222, 222, 204, 1) 0%, rgba(214, 205, 157, 1) 82%);
     padding: 30px;
-    margin: 40px 10px 0 10px;
+    margin: 40px 20px 0 20px;
     border: 2px solid #000;
     border-radius: 10px;
     box-shadow: 10px 13px 5px 0px rgba(0, 0, 0, 0.39);
@@ -296,6 +296,7 @@ body {
     font-weight: bold;
     margin: 10px 0 10px 0;
     text-align: center;
+    line-height: 1.8rem;
 }
 
 #input-name {
@@ -511,11 +512,15 @@ body {
         font-size: 1.8rem;
         margin-bottom: 15px;
     }
-
+/* word input */
     #input {
         font-size: 1.8rem;
     }
 
+    /* End Game Screen */
+    #input-name {
+        font-size: 1.8rem;
+    }
     /* 404 page */
     #papyrus {
         width: 300px;
@@ -540,7 +545,7 @@ body {
 
     /* adjust the modal pop up for iphone4 screens */
     #modal {
-        margin: 55px 5px 0 5px;
+        margin: 150px 5px 0 5px;
 
     }
 }
