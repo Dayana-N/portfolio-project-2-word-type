@@ -296,7 +296,7 @@ body {
     font-weight: bold;
     margin: 10px 0 10px 0;
     text-align: center;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 
 #input-name {
@@ -471,7 +471,7 @@ body {
 
     /* The current word displaying in the game screen */
     #display-word {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         margin-bottom: 15px;
     }
 
@@ -509,7 +509,7 @@ body {
     }
 
     #display-word {
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-bottom: 15px;
     }
 /* word input */
@@ -531,7 +531,7 @@ body {
 /* Media query for smaller than 380px screens */
 @media (max-width: 380px) {
     #display-word {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         margin-bottom: 15px;
     }
 
@@ -546,6 +546,5 @@ body {
     /* adjust the modal pop up for iphone4 screens */
     #modal {
         margin: 150px 5px 0 5px;
-
     }
 }

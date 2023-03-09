@@ -285,6 +285,7 @@ function howToPlay() {
         document.body.style.overflowY = 'visible';
     })
 
+    // add onclick event outside the modal window closes the modal
     window.onclick = function(event) {
         if(event.target == modalContainer) {
             modalContainer.style.display = 'none';
