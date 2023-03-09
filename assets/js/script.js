@@ -84,9 +84,14 @@ function startGame() {
 function checkGameType() {
     let difficultyButtons = document.querySelectorAll('.difficulty-btn');
     let gameType;
+    // check which button has active class and assign the difficulty to gameType 
+    difficultyButtons.forEach(button => {
+        if(button.classList.contains('active')) {
+            gameType = button.getAttribute('data-type')
+        }
+    })
 
-    difficultyButtons.forEach(button => button.classList.contains('active') ? gameType = button.getAttribute('data-type') : console.log('no active class'));
-
+// check which game type is selected and if there are words in the array before run the game
     if(gameType === 'easy' && easyWords.length !== 0){
         generateWord(easyWords)
     } else if (gameType === 'medium' && mediumWords.length !== 0) {
@@ -110,7 +115,7 @@ function generateWord(array){
 
     wordDisplay.innerHTML = '';
     document.getElementById('input').value = '';
-
+// Split the word in characters and create a span for each, then append to parent element
     randomWord.split('').forEach(character => {
         let characterSpan = document.createElement('span');
         characterSpan.classList.add('character-span');
@@ -245,7 +250,6 @@ function saveHighScore() {
     highScore.push(scoreObj)
     // sort the array
     highScore.sort((a,b) => b.score - a.score)
-    console.log(highScore)
     // slices 5 values from the array
     highScore.splice(5)
     // add the array to local storage
