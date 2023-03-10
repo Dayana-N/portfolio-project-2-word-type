@@ -70,3 +70,18 @@ The Page showed no errors or warnings <br>
 - 404.html Mobile
 ![Lighthouse test](./assets/images/testing/lighthouse-404-mobile.PNG)
 ### Result - Pass
+
+## Manual Testing
+### Features Testing
+- Welcome Screen
+![Welcome Screen](./assets/images/testing/welcome-screen-feature-test.PNG)
+- Game Screen
+![Game Screen](./assets/images/testing/game-screen-feature-test.PNG)
+- End Game Screen
+![End Game Screen](./assets/images/testing/end-game-screen-feature-test.PNG)
+- Score Board 
+![Score board Screen](./assets/images/testing/score-board-feature-test.PNG)
+
+
+### Browser Testing
+### Responsiveness Testing
