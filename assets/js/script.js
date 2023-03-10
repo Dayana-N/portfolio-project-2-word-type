@@ -208,7 +208,7 @@ function endGameMessage(){
     let score = parseInt(document.getElementById('score').innerText);
 
     if(score <= 10) {
-        text.innerText = 'You Should Practice More!';
+        text.innerText = 'You Should Practise More!';
     } else if(score <= 20) {
         text.innerText = 'Well Done!';
     } else {
