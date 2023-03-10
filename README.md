@@ -38,9 +38,9 @@ WordType is a speed typing game that allows the used to find out how many words 
 - As a first time user, I want to be able to see my current score.
 - As a first time user, I want to be able to see the remaining time left.
 - As a first time user, I want to be able to easily navigate through the website.
-- As a first time user, I want to get a feedback during my interaction with the application.
+- As a first time user, I want to get feedback during my interaction with the application.
 #### Returning Visitor Goals
-- As a returning user, I want to be able to get a feedback when the game is over with my score.
+- As a returning user, I want to be able to get feedback when the game is over with my score.
 - As a returning user, I want to be able to save my current highscore.
 - As a returning user, I want to be able to see the top highscores. 
 
@@ -50,12 +50,20 @@ The colours used complement each other for aesthetically pleasing user interface
 ![colour palette](./assets/images/readme-images/colors.PNG)
 ### Typography
 The fonts used are from [Google Fonts](https://fonts.google.com/share?selection.family=Special%20Elite%7CVast%20Shadow). 
-Special Elite imitates typewritter font which fits perfectly with the theme of the game. Vast Shadow was used to create the logo in the header.
+Special Elite imitates typewriter font which fits perfectly with the theme of the game. Vast Shadow was used to create the logo in the header.
 ### Images
-There are two images used in the game. The background image fits wll with the theme of the game and the typewritter font. The papyrus image on the 404 page was selected to provide better visual experience. Links to both can be found in Credits section.
+There are two images used in the game. The background image fits well with the theme of the game and the typewriter font. The papyrus image on the 404 page was selected to provide a better visual experience. Links to both can be found in the credits section.
 ### Wireframes
+### Welcome Screen
+![Welcome Screen](./assets/images/readme-images/wireframes/start-screen-wireframes.PNG)
+### Game Screen
+![Game Screen](./assets/images/readme-images/wireframes/game-screen-wireframes.PNG)
+### End Game Screen
+![End Game Screen](./assets/images/readme-images/wireframes/end-game-wireframes.PNG)
+### Scoreboard
+![Scoreboard](./assets/images/readme-images/wireframes/scoreboard-wireframes.PNG)
 ### Mockups
-Early mockups using Photoshop. These were created to provide visual guide for coding the structure of the website. Later on during development additional screens were added for the highscore function and the how to play modal on the welcome screen. 
+Early mockups using Photoshop. These were created to provide visual guides for coding the structure of the website. Later on during development additional screens were added for the high score function and the how to play modal on the welcome screen. 
 ### Welcome Screen
 ![Welcome Screen](./assets/images/readme-images/mockups/welcome-screen.PNG)
 ### Game Screen
@@ -67,32 +75,34 @@ Early mockups using Photoshop. These were created to provide visual guide for co
 
 ## Features
 ## Welcome Screen
-The game consist of one html page with dynamically changing screens using JavaScript and one 404 page.
-The background image was picked carefully to suit the theme of the game. When the page is loaded the welcome text loads with typewritter like effect. The name of the game is clearly communicated in the header of the main container. The difficulty buttons were design so that only one can be active at a time, and if it is active and clicked again will turn inactive. The active state is visually communicated to the user by changing color, reducing size and changing the border style, which overall makes the button appear as if it is pressed. This is consistent for all the buttons throughout the game. <br>
+The game consists of one html page with dynamically changing screens using JavaScript and one 404 page.
+The background image was picked carefully to suit the theme of the game. When the page is loaded the welcome text loads with typewriter like effect. The name of the game is clearly communicated in the header of the main container. The difficulty buttons were designed so that only one can be active at a time, and if it is active and clicked again will turn inactive. The active state is visually communicated to the user by changing colour, reducing size and changing the border style, which overall makes the button appear as if it is pressed. This is consistent for all the buttons throughout the game. <br>
 ![Welcome Screen](./assets/images/readme-images/features/home-screen1.PNG)
+
 If the user attempts to start the game without selecting difficulty a warning message appears above the start button asking the user to select difficulty first. <br>
 ![Welcome Screen warning](./assets/images/readme-images/features/home-screen2.PNG)
+
 The how to play button displays a modal popup with animation transition, which provides clear instructions of the game's rules for better user experience. When the modal is displayed the scroll on the main page is disabled and it is enabled on the modal section only if it is needed(for example small screen sizes like iphone 4) If the user clicks outside of the modal it will close it. <br>
 ![Welcome Screen modal](./assets/images/readme-images/features/home-screen-modal.PNG)
 
 ## Game Screen
-Once the game starts, the game screen will dynamically appear. This screen will display the word that the user needs to type. The input field has autofocus for better user experience (prevents the user having to click on the input field to start typing). Below the input field, the score and the timer are displayed. The timer starts counting down from 30s. When the user starts typing, each input character is compared to the word's character at the same index. If correct the character will turn green, if wrong turns red to communicate to the user the wrong input. Note that the user can use capital letters or lowercase letters. If the user removes a character from the input field the character in the word will turn black again. Every time the user types a word correct the next word will appear and the score will increment by one. <br>
+Once the game starts, the game screen will dynamically appear. This screen will display the word that the user needs to type. The input field has autofocus for better user experience (prevents the user having to click on the input field to start typing). Below the input field, the score and the timer are displayed. The timer starts counting down from 30s. When the user starts typing, each input character is compared to the word's character at the same index. If correct the character will turn green, if wrong turns red to communicate to the user the wrong input. Note that the user can use capital letters or lowercase letters. If the user removes a character from the input field the character in the word will turn black again. Every time the user types a word correctly the next word will appear and the score will increment by one. <br>
 ![Game Screen](./assets/images/readme-images/features/game-screen2.PNG)
 
 ## End Game Screen
-Once the timer reaches zero, the screen changes to end game. Here the user will be notified that the time is up and their score. A message is generated depending on the score value. Three messages are available: You Should Practice More!, Well Done! and Godlike! This if followed by an input field for the user's name. The submit button is deactivated until there is text in the input field. Once the submit button is pressed, the highscore is added to an array and sorted by the highest score. The top 5 scores are saved in local storage. <br>
+Once the timer reaches zero, the screen changes to the end game. Here the user will be notified that the time is up and their score. A message is generated depending on the score value. Three messages are available: You Should Practise More!, Well Done! and Godlike! This is followed by an input field for the user's name. The submit button is deactivated until there is text in the input field. Once the submit button is pressed, the highscore is added to an array and sorted by the highest score. The top 5 scores are saved in local storage. <br>
 ![End Game Screen](./assets/images/readme-images/features/end-screen1.PNG)
 ![End Game Screen](./assets/images/readme-images/features/end-screen3.PNG)
 
 ## Scoreboard
-The scoreboard screen will display the top 5 highscores sorted from highest to lowest. This is then followed by a play gain button, which takes the user to the start screen. <br>
+The scoreboard screen will display the top 5 highscores sorted from highest to lowest. This is then followed by a play again button, which takes the user to the start screen. <br>
 ![Scoreboard](./assets/images/readme-images/features/scoreboard.PNG)
 
 ## 404 Page
-The 404 Page consist of a background gradient with a papyrus image. The text informs the user that there is nothing on this page and has a button which leads to the start screen. <br>
+The 404 Page consists of a background gradient with a papyrus image. The text informs the user that there is nothing on this page and has a button which leads to the start screen. <br>
 ![404 Page](./assets/images/readme-images/features/404-page.PNG)
 ## Future Features 
-- I would like implement saving the highscores in a backend database, where the users can compare their score against others.
+- I would like to implement saving the highscores in a backend database, where the users can compare their score against others.
 - I would like to generate the words using an API. This was not implemented on this stage due to time deadline. 
 ## Testing
 Testing documentation can be found under [testing.md](/testing.md)
@@ -152,4 +162,8 @@ Testing documentation can be found under [testing.md](/testing.md)
 - Learned how to create the typewritter text effect with the help of my mentor Ronan McClelland
 - Improved my knowledge on arrow functions, for each, map, filter, setInterval and more from [Traversy Media's JavaScript course](https://www.traversymedia.com/modern-javascript-2-0) and [Harvard's Cs50 Course](https://www.youtube.com/playlist?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu)
 ### Acknowledgements
+- A huge Thank You to my mentor Ronan McClelland for all the brilliant advice and resources.
+- The Slack Community for their support and feedback.
+- Traversy Media for the brilliant courses.
 ### Comments
+I had a great time creating this project and I am looking forward to the next one.
