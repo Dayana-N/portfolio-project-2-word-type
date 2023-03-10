@@ -71,17 +71,31 @@ The Page showed no errors or warnings <br>
 ![Lighthouse test](./assets/images/testing/lighthouse-404-mobile.PNG)
 ### Result - Pass
 
+- Warning on all pages in the console <br>
+This warning appears due to the fact that GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative. - Source [Stackoverflow](https://stackoverflow.com/questions/69619035/error-with-permissions-policy-header-unrecognized-feature-interest-cohort) and [GithubBlog](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/) <br>
+![warning](./assets/images/testing/warning.PNG)
 ## Manual Testing
 ### Features Testing
-- Welcome Screen
+- Welcome Screen <br>
+
 ![Welcome Screen](./assets/images/testing/welcome-screen-feature-test.PNG)
-- Game Screen
+- Game Screen <br>
+
 ![Game Screen](./assets/images/testing/game-screen-feature-test.PNG)
-- End Game Screen
+- End Game Screen <br>
+
 ![End Game Screen](./assets/images/testing/end-game-screen-feature-test.PNG)
-- Score Board 
+- Score Board <br>
+
 ![Score board Screen](./assets/images/testing/score-board-feature-test.PNG)
-
-
 ### Browser Testing
+![browser testing](./assets/images/testing/browser.PNG)
 ### Responsiveness Testing
+The responsiveness of the application was tested using dev tools. During development, media queries were added to ensure the application is responsive for devices above 320px width. Two common sizes are documented below, however the application was tested on more than two screen sizes.
+- Tested on Samsung Galaxy S20 Ultra <br>
+
+![responsiveness testing](./assets/images/testing/responsive-s20ultra.PNG)
+- Tested on IPad Mini <br>
+
+![responsiveness testing](./assets/images/testing/responsive-ipadmini.PNG)
+## Bugs
