@@ -82,7 +82,7 @@ This warning appears due to the fact that GitHub hosted pages disable FLoC, whic
 ![warning](./assets/testing/warning.PNG)
 ## Manual Testing
 ### Features Testing
-The full testing document can be found [here](./assets/images/testing/features-testing.pdf). Please note that this is a pdf document and will require a program like Adobe Acrobat Reader DC to open it. <br>
+The full testing document can be found [here](./assets/testing/features-testing.pdf). Please note that this is a pdf document and will require a program like Adobe Acrobat Reader DC to open it. <br>
 ![features testing](./assets/testing/features-testing-img.PNG)
 ### Browser Testing
 ![browser testing](./assets/testing/browser.PNG)
