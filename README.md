@@ -33,6 +33,7 @@ WordType is a speed typing game that allows the used to find out how many words 
 ## User Experience
 ### User Stories
 #### First Time Visitor Goals
+- As a first time user, I want easily understand the main purpose of the website.
 - As a first time user, I want to be able to find the rules of the game quickly after landing on the page.
 - As a first time user, I want to be able to select different difficulty levels for the game. 
 - As a first time user, I want to be able to see my current score.

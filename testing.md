@@ -16,6 +16,8 @@
 * [Bugs](#bugs)
   
 ## User Story Testing
+### As a first time user, I want easily understand the main purpose of the website.
+- The header WordType and the subheader "Do you think you can beat the clock?" communicate to the user that the purpose of this website is a typing game. The background image with the typewriter serves as a fitting visual component that complements the website's purpose.
 ### As a first time user, I want to be able to find the rules of the game quickly after landing on the page.
 - The how to play button is displayed on the landing page and provides instructions for the user on the rules of the game. 
 ### As a first time user, I want to be able to select different difficulty levels for the game. 
