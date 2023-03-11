@@ -40,64 +40,58 @@
 ### The W3C Markup Validation Service
 - index.html <br>
 The test showed two warnings. The text in these two headings is added via JavaScript. The first one to create the  typewriter-like effect on the welcome text and the second to display the random word for the game. 
-![html test index page](./assets/images/testing/html-test-index.PNG)
+![html test index page](./assets/testing/html-test-index.PNG)
 ### Result - Pass
 - 404.html <br>
 The Page showed no errors or warnings <br>
-![html test 404 page](./assets/images/testing/html-test-404.PNG)
+![html test 404 page](./assets/testing/html-test-404.PNG)
 ### Result - Pass
 ### The W3C CSS Validation Service
-![CSS test 404 page](./assets/images/testing/css-test.PNG)
+![CSS test 404 page](./assets/testing/css-test.PNG)
 ### Result - Pass
 ### JSHint Validation
 - script.js and words.js were tested together. There were missing semicolons throughout the code and this was rectified. The validator caught a typo in one of the arrays used as a parameter in a function, which was also fixed. Currently no errors or warnings to display <br>
-![JSHint validator](./assets/images/testing/jshint.PNG)
+![JSHint validator](./assets/testing/jshint.PNG)
 ### Result - Pass
 
 ### Google Lighthouse
 - index.html Desktop
-![Lighthouse test](./assets/images/testing/lighthouse-index-desktop.PNG)
+
+![Lighthouse test](./assets/testing/lighthouse-index-desktop.PNG)
 ### Result - Pass
 
 - index.html Mobile
-![Lighthouse test](./assets/images/testing/lighthouse-index-mobile.PNG)
+
+![Lighthouse test](./assets/testing/lighthouse-index-mobile.PNG)
 ### Result - Pass
 
 - 404.html Desktop 
-![Lighthouse test](./assets/images/testing/lighthouse-404-desktop.PNG)
+
+![Lighthouse test](./assets/testing/lighthouse-404-desktop.PNG)
 ### Result - Pass
 
 - 404.html Mobile
-![Lighthouse test](./assets/images/testing/lighthouse-404-mobile.PNG)
+
+![Lighthouse test](./assets/testing/lighthouse-404-mobile.PNG)
 ### Result - Pass
 
 - Warning on all pages in the console <br>
 This warning appears due to the fact that GitHub hosted pages disable FLoC, which is Google's 3rd party cookie alternative. - Source [Stackoverflow](https://stackoverflow.com/questions/69619035/error-with-permissions-policy-header-unrecognized-feature-interest-cohort) and [GithubBlog](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/) <br>
-![warning](./assets/images/testing/warning.PNG)
+![warning](./assets/testing/warning.PNG)
 ## Manual Testing
 ### Features Testing
-- Welcome Screen <br>
-
-![Welcome Screen](./assets/images/testing/welcome-screen-feature-test.PNG)
-- Game Screen <br>
-
-![Game Screen](./assets/images/testing/game-screen-feature-test.PNG)
-- End Game Screen <br>
-
-![End Game Screen](./assets/images/testing/end-game-screen-feature-test.PNG)
-- Score Board <br>
-
-![Score board Screen](./assets/images/testing/score-board-feature-test.PNG)
+The full testing document can be found [here](./assets/images/testing/features-testing.pdf). Please note that this is a pdf document and will require a program like Adobe Acrobat Reader DC to open it. <br>
+![features testing](./assets/testing/features-testing-img.PNG)
 ### Browser Testing
-![browser testing](./assets/images/testing/browser.PNG)
+![browser testing](./assets/testing/browser.PNG)
 ### Responsiveness Testing
 The responsiveness of the application was tested using dev tools. During development, media queries were added to ensure the application is responsive for devices above 320px width. Two common sizes are documented below, however the application was tested on more than two screen sizes.
 - Tested on Samsung Galaxy S20 Ultra <br>
 
-![responsiveness testing](./assets/images/testing/responsive-s20ultra.PNG)
+![responsiveness testing](./assets/testing/responsive-s20ultra.PNG)
 - Tested on IPad Mini <br>
 
-![responsiveness testing](./assets/images/testing/responsive-ipadmini.PNG)
+![responsiveness testing](./assets/testing/responsive-ipadmini.PNG)
 ## Bugs
 - During testing of the game, one of the words in medium difficulty was displayed with a comma at the end. This was easily fixed by removing the comma from the string.
 - During testing of the JavaScript code with the validator it was noted on multiple lines that semicolons are missing. This was rectified by adding the missing semicolons to be consistent with the code.
