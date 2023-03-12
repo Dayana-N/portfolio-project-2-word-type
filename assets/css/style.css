@@ -86,7 +86,6 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
 .difficulty-btn {
@@ -164,7 +163,6 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-
 }
 
 
@@ -261,6 +259,7 @@ body {
 .red {
     color: #a14531;
 }
+
 /* Container holding the score and the time */
 #info {
     width: 90%;
@@ -349,7 +348,6 @@ body {
 
 #score-list {
     padding: 0;
-
 }
 
 #score-list li {
@@ -411,7 +409,6 @@ body {
 #papyrus h1, h2 {
     margin: 10px 0 20px;
     text-align: center;
-    
 }
 
 #papyrus h1 {
@@ -440,7 +437,7 @@ body {
 /* Media query for smaller than 800px screens */
 @media (max-width: 800px) {
 
-    /* Container holding the different screens changing */
+    /* Container holding the different screens */
     #container {
         min-height: 380px;
         max-width: 80%;
@@ -530,11 +527,12 @@ body {
 
 /* Media query for smaller than 380px screens */
 @media (max-width: 380px) {
+    /* Current word */
     #display-word {
         font-size: 1.7rem;
         margin-bottom: 15px;
     }
-
+    
     #input {
         font-size: 1.5rem;
     }

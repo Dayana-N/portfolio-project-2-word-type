@@ -7,7 +7,7 @@
 * [Automated Testing](#automated-testing)
   * [The W3C Markup Validation Service](#the-w3c-markup-validation-service)
   * [The W3C CSS Validation Service](#the-w3c-css-validation-service)
-  * [JSHint](#JSHint)
+  * [JSHint](#JSHint-Validation)
   * [Google Lighthouse](#google-lighthouse)
 * [Manual Testing](#manual-testing)
   * [Features Testing](#features-testing)
@@ -97,5 +97,5 @@ The responsiveness of the application was tested using dev tools. During develop
 ## Bugs
 - During testing of the game, one of the words in medium difficulty was displayed with a comma at the end. This was easily fixed by removing the comma from the string.
 - During testing of the JavaScript code with the validator it was noted on multiple lines that semicolons are missing. This was rectified by adding the missing semicolons to be consistent with the code.
-- After the game was fully functionable it was noted that the random words repeat. While this is not a bug on its own, during the implementation of the solution a bug was created. The solution is to remove the word from the array and push it onto an array called usedWords. In the unlikely event that the user runs out of words the game will continue using the words from the usedWords array. The bug was caused when the used word was pushed onto the array. It caused the score to be inaccurate and the Scoreboard displayed more than five scores. The steps taken were to console log each element along the way which showed that I was pushing array into array instead of a string. This was solved by using the spread operator. The bug was not documented in the commit messages due to the fact that the code was pushed after it was all tested and working. 
+- After the game was fully functionable it was noted that the random words repeat. While this is not a bug on its own, during the implementation of the solution a bug was created. The solution is to remove the word from the array and push it into an array called usedWords. In the unlikely event that the user runs out of words the game will continue using the words from the usedWords array. The bug was caused when the used word was pushed onto the array. It caused the score to be inaccurate and the Scoreboard displayed more than five scores. The steps taken were to console log each element along the way which showed that I was pushing array into array instead of a string. This was solved by using the spread operator. The bug was not documented in the commit messages due to the fact that the code was pushed after it was all tested and working. 
 - After the game was made responsive it was noted that the display word appears too small on some mobile devices. The font size was changed on the corresponding screen sizes using media queries.

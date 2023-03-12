@@ -19,7 +19,7 @@ function displayText() {
     let i = 0;
 
     function typewritter(text, textEl) {
-
+        // add one character at a time to the element, using setTimeout to delay the next character by 100ms
         if (i < text.length) {
             textEl.innerHTML += text.charAt(i);
             i++;
@@ -128,7 +128,7 @@ function generateWord(array){
     });
 }
 
-    // compare each character of the current word with the input field character
+    // compare each character of the current word with the input field character, implemented from tutorial linked in readme
     function compareWords() {
         let userInput = document.getElementById('input');
         
@@ -237,8 +237,7 @@ function submitScore() {
     displayHighScore();
 }
 
-//save scores in local storage
-
+//save scores in local storage, implemented from tutorial linked in the readme
 function saveHighScore() {
     let name = document.getElementById('input-name').value;
     let score = document.getElementById('score').innerText;
@@ -267,7 +266,7 @@ function displayHighScore() {
     });
 }
 
-// modal 
+// modal implemented from tutorial link in readme
 function howToPlay() {
     let modalContainer = document.getElementById('modal-container');
     let howToBtn = document.getElementById('how-to-play');
