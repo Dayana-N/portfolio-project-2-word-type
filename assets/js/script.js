@@ -53,7 +53,7 @@ function checkDifficulty() {
 
     startBtn.addEventListener('click', () => {
         difficultyButtons.forEach(button => {
-            if(button.classList.contains('active')){
+            if (button.classList.contains('active')) {
                 startError.innerHTML = '';
                 startGame();
             } else {
@@ -67,12 +67,10 @@ function checkDifficulty() {
 function startGame() {
     document.getElementById('welcome-screen').style.display = 'none';
     document.getElementById('start-game').style.display = 'flex';
-
     // Focus on input field
     document.getElementById('input').focus();
     // Set initial score to 0
     document.getElementById('score').innerHTML = 0;
-
     // check game time to display correct word
     checkGameType();
     // start timer
@@ -86,13 +84,13 @@ function checkGameType() {
     let gameType;
     // check which button has active class and assign the difficulty to gameType 
     difficultyButtons.forEach(button => {
-        if(button.classList.contains('active')) {
+        if (button.classList.contains('active')) {
             gameType = button.getAttribute('data-type');
         }
     });
 
-// check which game type is selected and if there are words in the array before run the game
-    if(gameType === 'easy' && easyWords.length !== 0){
+    // check which game type is selected and if there are words in the array before run the game
+    if (gameType === 'easy' && easyWords.length !== 0) {
         generateWord(easyWords);
     } else if (gameType === 'medium' && mediumWords.length !== 0) {
         generateWord(mediumWords);
@@ -104,7 +102,7 @@ function checkGameType() {
 }
 
 // generate random word
-function generateWord(array){
+function generateWord(array) {
     let randomIndex = Math.floor(Math.random() * array.length);
     let randomWord = array[randomIndex];
     let wordDisplay = document.getElementById('display-word');
@@ -115,59 +113,57 @@ function generateWord(array){
 
     wordDisplay.innerHTML = '';
     document.getElementById('input').value = '';
-// Split the word in characters and create a span for each, then append to parent element
+    // Split the word in characters and create a span for each, then append to parent element
     randomWord.split('').forEach(character => {
         let characterSpan = document.createElement('span');
         characterSpan.classList.add('character-span');
         characterSpan.innerText = character.toUpperCase();
         wordDisplay.appendChild(characterSpan);
-        // compare words
-        compareWords();
-
-        return randomWord;
     });
+    // compare words  
+    compareWords();
 }
 
-    // compare each character of the current word with the input field character, implemented from tutorial linked in readme
-    function compareWords() {
-        let userInput = document.getElementById('input');
-        
-        // add eventlistener to the input and create arrays by splitting the input values and the characters in the word
-        userInput.addEventListener('input', () => {
-            let arrayWord = document.querySelectorAll('.character-span');
-            let arrayInput = userInput.value.split('');
-            let correct = true;
+// compare each character of the current word with the input field character, implemented from tutorial linked in readme
+function compareWords() {
+    let userInput = document.getElementById('input');
 
-            arrayWord.forEach((characterSpan, index) => {
-                let character = arrayInput[index];
+    // add eventlistener to the input and create arrays by splitting the input values and the characters in the word
+    userInput.addEventListener('keyup', () => {
+        let arrayWord = document.querySelectorAll('.character-span');
+        let arrayInput = userInput.value.split('');
+        let correct = true;
 
-                if(character == null){
-                    characterSpan.classList.remove('green');
-                    characterSpan.classList.remove('red');
-                    correct = false;
-                } else if (character.toLowerCase() === characterSpan.innerText.toLowerCase()) {
-                    characterSpan.classList.add('green');
-                    characterSpan.classList.remove('red');
-                } else {
-                    characterSpan.classList.add('red');
-                    characterSpan.classList.remove('green');
-                    correct = false;
-                }
-            });
+        arrayWord.forEach((characterSpan, index) => {
+            let character = arrayInput[index];
 
-            if(correct) {
-                // check game type and display word
-                checkGameType();
-                // increment score
-                incrementScore();
+            if (character == null) {
+                characterSpan.classList.remove('green');
+                characterSpan.classList.remove('red');
+                correct = false;
+            } else if (character.toLowerCase() === characterSpan.innerText.toLowerCase()) {
+                characterSpan.classList.add('green');
+                characterSpan.classList.remove('red');
+            } else {
+                characterSpan.classList.add('red');
+                characterSpan.classList.remove('green');
+                correct = false;
             }
         });
-    }
+
+        if (correct) {
+            // check game type and display word
+            checkGameType();
+            // increment score
+            incrementScore();
+        }
+    });
+}
 
 // increment score
 function incrementScore() {
     let score = parseInt(document.getElementById('score').innerHTML);
-    score ++;
+    score++;
     document.getElementById('score').innerHTML = score;
 }
 
@@ -179,8 +175,8 @@ function startTimer() {
     let setTimer = setInterval(() => {
         --time;
         timer.innerHTML = time;
-// if time is 0 stop the timer and display end screen
-        if(time === 0){
+        // if time is 0 stop the timer and display end screen
+        if (time === 0) {
             clearInterval(setTimer);
             gameOver();
         }
@@ -198,18 +194,18 @@ function gameOver() {
     endGameMessage();
     checkNameInput();
 
-    document.getElementById('submit').addEventListener('click',() => submitScore());
+    document.getElementById('submit').addEventListener('click', () => submitScore());
 
 }
 
 // generates message based on the score number
-function endGameMessage(){
+function endGameMessage() {
     let text = document.getElementById('result-msg');
     let score = parseInt(document.getElementById('score').innerText);
 
-    if(score <= 10) {
+    if (score <= 10) {
         text.innerText = 'You Should Practise More!';
-    } else if(score <= 20) {
+    } else if (score <= 20) {
         text.innerText = 'Well Done!';
     } else {
         text.innerText = 'Godlike!';
@@ -221,7 +217,7 @@ function checkNameInput() {
     let submitBtn = document.getElementById('submit');
 
     nameInput.addEventListener('input', () => {
-        if(nameInput.value === ''){
+        if (nameInput.value === '') {
             submitBtn.disabled = true;
         } else {
             submitBtn.disabled = false;
@@ -241,7 +237,7 @@ function submitScore() {
 function saveHighScore() {
     let name = document.getElementById('input-name').value;
     let score = document.getElementById('score').innerText;
-// create object with the user name and score
+    // create object with the user name and score
     let scoreObj = {
         name: name,
         score: score
@@ -249,7 +245,7 @@ function saveHighScore() {
     // push the object to the array
     highScore.push(scoreObj);
     // sort the array
-    highScore.sort((a,b) => b.score - a.score);
+    highScore.sort((a, b) => b.score - a.score);
     // slices 5 values from the array
     highScore.splice(5);
     // add the array to local storage
@@ -278,15 +274,15 @@ function howToPlay() {
         document.body.style.overflowY = 'hidden';
     });
 
-     // add eventlistener to the got it button to hide the modal and revert the scroll on background
+    // add eventlistener to the got it button to hide the modal and revert the scroll on background
     gotItBtn.addEventListener('click', () => {
         modalContainer.style.display = 'none';
         document.body.style.overflowY = 'visible';
     });
 
     // add onclick event outside the modal window closes the modal
-    window.onclick = function(event) {
-        if(event.target == modalContainer) {
+    window.onclick = function (event) {
+        if (event.target == modalContainer) {
             modalContainer.style.display = 'none';
         }
     };
