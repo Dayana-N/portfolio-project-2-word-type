@@ -58,23 +58,23 @@ Special Elite imitates typewriter font which fits perfectly with the theme of th
 ### Images
 There are two images used in the game. The background image fits well with the theme of the game and the typewriter font. The papyrus image on the 404 page was selected to provide a better visual experience. Links to both can be found in the credits section.
 ### Wireframes
-### Welcome Screen
+### Welcome Screen Wireframes
 ![Welcome Screen](./assets/images/readme-images/wireframes/start-screen-wireframes.PNG)
-### Game Screen
+### Game Screen Wireframes
 ![Game Screen](./assets/images/readme-images/wireframes/game-screen-wireframes.PNG)
-### End Game Screen
+### End Game Screen Wireframes
 ![End Game Screen](./assets/images/readme-images/wireframes/end-game-wireframes.PNG)
-### Scoreboard
+### Scoreboard Wireframes
 ![Scoreboard](./assets/images/readme-images/wireframes/scoreboard-wireframes.PNG)
 ### Mockups
 Early mockups using Photoshop. These were created to provide visual guides for coding the structure of the website. Later on during development additional screens were added for the high score function and the how to play modal on the welcome screen. 
-### Welcome Screen
+### Welcome Screen Mockups
 ![Welcome Screen](./assets/images/readme-images/mockups/welcome-screen.PNG)
-### Game Screen
+### Game Screen Mockups
 ![Start Game Screen](./assets/images/readme-images/mockups/game-screen.PNG)
-### End Game Screen
+### End Game Screen Mockups
 ![End Game Screen](./assets/images/readme-images/mockups/end-screen.PNG)
-### 404 Page
+### 404 Page Mockups
 ![404 Page](./assets/images/readme-images/mockups/404-page.PNG)
 
 ## Features
