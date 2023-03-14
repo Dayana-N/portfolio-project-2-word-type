@@ -136,7 +136,6 @@ function compareWords() {
 
         arrayWord.forEach((characterSpan, index) => {
             let character = arrayInput[index];
-
             if (character == null) {
                 characterSpan.classList.remove('green');
                 characterSpan.classList.remove('red');
@@ -171,7 +170,6 @@ function incrementScore() {
 function startTimer() {
     let timer = document.getElementById('time');
     let time = 30;
-
     let setTimer = setInterval(() => {
         --time;
         timer.innerHTML = time;
@@ -187,22 +185,18 @@ function startTimer() {
 function gameOver() {
     document.getElementById('start-game').style.display = 'none';
     document.getElementById('end-game').style.display = 'flex';
-
     let score = document.getElementById('score').innerText;
     let result = document.getElementById('result');
     result.innerHTML = score;
     endGameMessage();
     checkNameInput();
-
     document.getElementById('submit').addEventListener('click', () => submitScore());
-
 }
 
 // generates message based on the score number
 function endGameMessage() {
     let text = document.getElementById('result-msg');
     let score = parseInt(document.getElementById('score').innerText);
-
     if (score <= 10) {
         text.innerText = 'You Should Practise More!';
     } else if (score <= 20) {
@@ -215,7 +209,6 @@ function endGameMessage() {
 function checkNameInput() {
     let nameInput = document.getElementById('input-name');
     let submitBtn = document.getElementById('submit');
-
     nameInput.addEventListener('input', () => {
         if (nameInput.value === '') {
             submitBtn.disabled = true;
